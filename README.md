@@ -47,3 +47,27 @@ Use the following command to activate the created conda environment:
 ```bash
 $ conda activate vision
 ```
+
+### Visual Studio Code 
+
+Visual Studio Code allows to edit and run files on Azure.
+
+Add your own debugging configuration to the `launch.json` file.
+
+example:
+
+```json
+    "configurations": [
+        {
+            "name": "FlosConfig",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "python": "/anaconda/envs/vision/bin/python",
+            "cwd": "~/cloudfiles/code/Users/florian.sonderegger/data_hackdays",
+            "justMyCode": true
+        }
+    ]
+```
+
